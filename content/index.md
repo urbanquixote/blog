@@ -1,30 +1,32 @@
 ---
-title: Digital Garden
+title: Urban Quixote
 ---
 
-관심있는 분야의 지식을 수집하고
-사고의 확장을 통해 인사이트를 얻고 싶습니다.
+# Urban Quixote's Digital Garden 🌱
+
+도시의 돈키호테처럼 현대를 살아가는 이야기를 기록합니다.
 
 ---
 
 ## 📚 지식저장소
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
 
-<div style="padding: 1.5rem; border: 1px solid var(--lightgray); border-radius: 8px; background: var(--highlight);">
+<div>
 
 ### 📖 [[지식저장소/위대한 문명사/index|위대한 문명사]]
-- [[지식저장소/위대한 문명사/1. 시계 태엽에서 명검까지 - 한 공학자의 문명 개혁 여정|한 공학자의 문명 개혁 여정]]
-- [[지식저장소/위대한 문명사/2. 산업혁명은 만들어진다 - 영국부터 한국까지 패권국 도약의 법칙|영국부터 한국까지 패권국 도약의 법칙]]
-- [[지식저장소/위대한 문명사/3. 감속에서 가속으로 - 농업사회를 넘어선 인류 문명의 대전환|농업사회를 넘어선 인류 문명의 대전환]]
-
+김태유 교수의 문명사 강의 노트
+- 문명과 산업혁명의 본질
+- 한강의 기적과 압축성장  
+- 북극항로와 미래 전략
+- **60개 이상의 문서**
 
 </div>
 
-<div style="padding: 1.5rem; border: 1px solid var(--lightgray); border-radius: 8px; background: var(--highlight);">
+<div>
 
 ### 💰 [[지식저장소/부채로 만든 세상/index|부채로 만든 세상]]
-현대 경제와 금융 시스템의 작동 원리를 이해하기 위한 학습 노트
+경제와 금융 시스템 학습 노트
 - 화폐의 역사와 본질
 - 부채 시스템의 메커니즘
 - 금융 위기의 패턴
@@ -32,23 +34,14 @@ title: Digital Garden
 
 </div>
 
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 0 0 2rem 0;">
-
-<div style="padding: 1.5rem; border: 1px solid var(--lightgray); border-radius: 8px; background: var(--highlight);">
+<div>
 
 ### 🏃‍♂️ [[지식저장소/건강/index|건강]]
-건강한 삶을 위한 정보와 실천 방법
+건강한 삶을 위한 정보
 - 운동과 영양
 - 수면과 회복
 - 정신 건강
-- **실천 가능한 팁 모음**
-
-</div>
-
-<div style="padding: 1.5rem; border: 1px solid var(--lightgray); border-radius: 8px; background: var(--highlight);">
-
+- **실천 가능한 팁**
 
 </div>
 
@@ -81,10 +74,12 @@ title: Digital Garden
 
 ## 🔗 최근 업데이트
 
-- [[지식저장소/위대한 문명사/1. 시계 태엽에서 명검까지 - 한 공학자의 문명 개혁 여정|한 공학자의 문명 개혁 여정]]
-- [[지식저장소/위대한 문명사/2. 산업혁명은 만들어진다 - 영국부터 한국까지 패권국 도약의 법칙|영국부터 한국까지 패권국 도약의 법칙]]
-- [[지식저장소/위대한 문명사/3. 감속에서 가속으로 - 농업사회를 넘어선 인류 문명의 대전환|농업사회를 넘어선 인류 문명의 대전환]]
-
+### 위대한 문명사 시리즈
+- [[지식저장소/위대한 문명사/1. 시계 태엽에서 명검까지 - 한 공학자의 문명 개혁 여정|시계 태엽에서 명검까지]]
+- [[지식저장소/위대한 문명사/2. 산업혁명은 만들어진다 - 영국부터 한국까지 패권국 도약의 법칙|산업혁명은 만들어진다]]
+- [[지식저장소/위대한 문명사/3. 감속에서 가속으로 - 농업사회를 넘어선 인류 문명의 대전환|감속에서 가속으로]]
+- [[지식저장소/위대한 문명사/4. 동양삼국의 산업혁명 성패와 현재의 교훈|동양삼국의 산업혁명 성패]]
+- [[지식저장소/위대한 문명사/5. 행복의 역설과 문명 발전의 딜레마|행복의 역설과 문명 발전]]
 
 ---
 
