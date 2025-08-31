@@ -2,24 +2,34 @@
 
 // put your custom CSS here!
 
-// 폴더 페이지의 파일 목록 숨기기
-.page-listing {
+// Explorer가 제대로 보이도록 설정
+.explorer {
+  display: block !important;
+  visibility: visible !important;
+}
+
+// 폴더 페이지의 파일 목록만 숨기기 (더 구체적으로)
+body[data-slug*="지식저장소"] .page-listing,
+body[data-slug*="건강"] .page-listing,
+body[data-slug*="위대한-문명사"] .page-listing,
+body[data-slug*="부채로-만든-세상"] .page-listing {
   display: none !important;
 }
 
-// 또는 더 구체적으로 날짜와 파일 목록만 숨기기
-article.popover-hint > ul {
+// 폴더 페이지 하단의 메타 정보 숨기기
+.folder-meta {
   display: none !important;
 }
 
-// 폴더 페이지 하단의 "Folder" 텍스트와 파일 개수도 숨기기
-.folder-container {
-  display: none !important;
+// Explorer 내부 콘텐츠가 보이도록 확인
+.explorer-content {
+  display: block !important;
 }
 
-// 페이지 메타 정보 (날짜) 숨기기
-.content-meta {
-  &.folder-meta {
-    display: none !important;
-  }
+.explorer ul {
+  display: block !important;
+}
+
+.explorer li {
+  display: block !important;
 }
