@@ -40,9 +40,9 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.Explorer({
       title: "목차",
-      folderDefaultState: "open",
+      folderDefaultState: "collapsed",
       folderClickBehavior: "link",
-      useSavedState: true,
+      useSavedState: false,
     }),
     Component.DesktopOnly(Component.Graph()),
   ],
@@ -66,9 +66,9 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer({
       title: "목차",
-      folderDefaultState: "open",
+      folderDefaultState: "collapsed",
       folderClickBehavior: "link",
-      useSavedState: true,
+      useSavedState: false,
     }),
   ],
   right: [],
