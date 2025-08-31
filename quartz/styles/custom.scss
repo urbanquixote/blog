@@ -1,3 +1,25 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// 폴더 페이지의 파일 목록 숨기기
+.page-listing {
+  display: none !important;
+}
+
+// 또는 더 구체적으로 날짜와 파일 목록만 숨기기
+article.popover-hint > ul {
+  display: none !important;
+}
+
+// 폴더 페이지 하단의 "Folder" 텍스트와 파일 개수도 숨기기
+.folder-container {
+  display: none !important;
+}
+
+// 페이지 메타 정보 (날짜) 숨기기
+.content-meta {
+  &.folder-meta {
+    display: none !important;
+  }
+}
