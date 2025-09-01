@@ -1,25 +1,21 @@
 ---
 title: 디지털 가든
 ---
-관심있는 분야의 지식을 수집하고
-사고의 확장을 통해 인사이트를 얻고자 합니다.
+관심있는 분야의 
 
 ---
 
 ## 📚 지식저장소
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0;">
+
 <div>
+
 ### 📖 [[지식저장소/위대한 문명사/index|위대한 문명사]]
 ### 💰 [[지식저장소/부채로 만든 세상/index|부채로 만든 세상]]
 ### 🏃‍♂️ [[지식저장소/건강/index|건강]]
 
 </div>
-
-<div>
-
-
-</div>
-
 
 </div>
 
@@ -36,12 +32,12 @@ title: 디지털 가든
   
   <div style="padding: 1rem; border-left: 3px solid var(--tertiary); background: var(--highlight);">
     <strong>디지털 가든</strong><br/>
-    <small>메모와 지식 관리</small>
+    <small>메모와 개인 지식 관리</small>
   </div>
   
   <div style="padding: 1rem; border-left: 3px solid var(--secondary); background: var(--highlight);">
     <strong>웹 개발</strong><br/>
-    <small>바이브 코딩을 통한 서비스 출시</small>
+    <small>바이브 코딩으로 서비스 출시</small>
   </div>
   
 </div>
