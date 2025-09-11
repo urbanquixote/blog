@@ -1,4 +1,11 @@
-<span style="color:gray; font-size:15px; font-style:italic">2024-12-02</span>
+---
+title: "[[250202 (Times) AI 라이선스 계약이 좋은 저널리즘을 보호할 수 있다, 로이터 CEO 발언]]"
+date: 2025-09-04
+aliases:
+---
+
+
+
 ## 목차
 
 - [[#AI 라이선스 계약, 저널리즘 보호의 새로운 기회]]
