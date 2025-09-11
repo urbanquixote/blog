@@ -3,7 +3,7 @@ name: Update News List
 on:
   push:
     paths:
-      - 'content/news/**'
+      - 'content/News/**'
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
       - name: Update news list in index.md
         run: |
           # 뉴스 폴더에서 최신 파일 5개 가져오기
-          NEWS_FILES=$(find content/news -name "*.md" -type f | sort -r | head -5)
+          NEWS_FILES=$(find content/News -name "*.md" -type f ! -name "index.md" | sort -r | head -5)
           
           # 새로운 뉴스 목록 생성
           echo "**최신 뉴스:**" > temp_news.md
@@ -46,9 +46,9 @@ jobs:
           done
           
           echo "" >> temp_news.md
-          echo "→ [모든 뉴스 보기](./news/)" >> temp_news.md
+          echo "→ [모든 뉴스 보기](./News/)" >> temp_news.md
           
-          # index.md에서 뉴스 섹션 업데이트
+          # content/index.md에서 뉴스 섹션 업데이트
           awk '
           /<!-- NEWS_START -->/ { 
               print; 
@@ -60,9 +60,9 @@ jobs:
               skip=0 
           }
           !skip
-          ' index.md > index_new.md
+          ' content/index.md > index_new.md
           
-          mv index_new.md index.md
+          mv index_new.md content/index.md
           rm temp_news.md
 
       - name: Commit and push changes
@@ -71,7 +71,7 @@ jobs:
           git config --local user.name "GitHub Action"
           
           if [ -n "$(git status --porcelain)" ]; then
-            git add index.md
+            git add content/index.md
             git commit -m "자동 업데이트: 최신 뉴스 목록"
             git push
           else
