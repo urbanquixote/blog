@@ -16,7 +16,7 @@ title: “디지털 가든”
         비즈니스 모델 탐색
       </h2>
 
-```
+
   <div class="subsections-grid">
     <div class="subsection">
       <h3>📰 뉴스 읽기</h3>
@@ -63,7 +63,7 @@ title: “디지털 가든”
     </div>
   </div>
 </div>
-```
+
 
   </div>
 
