@@ -2,7 +2,6 @@
 title: “디지털 가든”
 ---
 
-
 <div class="homepage-container">
   <div class="header">
     <h1>디지털 가든</h1>
