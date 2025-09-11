@@ -1,79 +1,79 @@
 name: Update News List
 
 on:
-push:
-paths:
-- ‘content/news/**’
-schedule:
-- cron: ‘0 0 * * *’
-workflow_dispatch:
+  push:
+    paths:
+      - 'content/news/**'
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
-update-news-list:
-runs-on: ubuntu-latest
+  update-news-list:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v3
-    with:
-      fetch-depth: 0
-      token: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-  - name: Setup Node.js
-    uses: actions/setup-node@v3
-    with:
-      node-version: '18'
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-  - name: Update news list in index.md
-    run: |
-      # 뉴스 폴더에서 최신 파일 5개 가져오기
-      NEWS_FILES=$(find content/news -name "*.md" -type f | sort -r | head -5)
-      
-      # 새로운 뉴스 목록 생성
-      echo "**최신 뉴스:**" > temp_news.md
-      
-      for file in $NEWS_FILES; do
-        # 파일명에서 날짜와 제목 추출
-        filename=$(basename "$file" .md)
-        # 파일의 첫 번째 줄(제목) 가져오기
-        title=$(head -n 1 "$file" | sed 's/^# //')
-        
-        # 상대 경로로 링크 생성
-        relative_path=${file#content/}
-        link_path=${relative_path%.md}
-        
-        echo "- [$title](./$link_path)" >> temp_news.md
-      done
-      
-      echo "" >> temp_news.md
-      echo "→ [모든 뉴스 보기](./news/)" >> temp_news.md
-      
-      # index.md에서 뉴스 섹션 업데이트
-      awk '
-      /<!-- NEWS_START -->/ { 
-          print; 
-          system("cat temp_news.md"); 
-          skip=1; 
-          next 
-      }
-      /<!-- NEWS_END -->/ { 
-          skip=0 
-      }
-      !skip
-      ' index.md > index_new.md
-      
-      mv index_new.md index.md
-      rm temp_news.md
+      - name: Update news list in index.md
+        run: |
+          # 뉴스 폴더에서 최신 파일 5개 가져오기
+          NEWS_FILES=$(find content/news -name "*.md" -type f | sort -r | head -5)
+          
+          # 새로운 뉴스 목록 생성
+          echo "**최신 뉴스:**" > temp_news.md
+          
+          for file in $NEWS_FILES; do
+            # 파일명에서 날짜와 제목 추출
+            filename=$(basename "$file" .md)
+            # 파일의 첫 번째 줄(제목) 가져오기
+            title=$(head -n 1 "$file" | sed 's/^# //')
+            
+            # 상대 경로로 링크 생성
+            relative_path=${file#content/}
+            link_path=${relative_path%.md}
+            
+            echo "- [$title](./$link_path)" >> temp_news.md
+          done
+          
+          echo "" >> temp_news.md
+          echo "→ [모든 뉴스 보기](./news/)" >> temp_news.md
+          
+          # index.md에서 뉴스 섹션 업데이트
+          awk '
+          /<!-- NEWS_START -->/ { 
+              print; 
+              system("cat temp_news.md"); 
+              skip=1; 
+              next 
+          }
+          /<!-- NEWS_END -->/ { 
+              skip=0 
+          }
+          !skip
+          ' index.md > index_new.md
+          
+          mv index_new.md index.md
+          rm temp_news.md
 
-  - name: Commit and push changes
-    run: |
-      git config --local user.email "action@github.com"
-      git config --local user.name "GitHub Action"
-      
-      if [ -n "$(git status --porcelain)" ]; then
-        git add index.md
-        git commit -m "자동 업데이트: 최신 뉴스 목록"
-        git push
-      else
-        echo "변경사항이 없습니다."
-      fi
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            git add index.md
+            git commit -m "자동 업데이트: 최신 뉴스 목록"
+            git push
+          else
+            echo "변경사항이 없습니다."
+          fi
