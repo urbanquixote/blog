@@ -35,7 +35,8 @@ jobs:
             filename=$(basename "$file" .md)
             relative_path=${file#content/}
             link_path=${relative_path%.md}
-            echo "- [$filename](./$link_path)" >> temp_news.md
+            # echo "- [$filename](./$link_path)" >> temp_news.md
+            echo "- [[$filename]]" >> temp_news.md
           done
           
           echo "" >> temp_news.md
