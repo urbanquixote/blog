@@ -77,7 +77,23 @@ const config: QuartzConfig = {
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
-      Plugin.ContentPage(),
+      Plugin.ContentPage({
+		  head: Component.Head(),
+		  header: [],
+		  beforeBody: [Component.Breadcrumbs()],
+		  left: [
+		    Component.PageTitle(),
+		    Component.MobileOnly(Component.Spacer()),
+		    Component.Search(),
+		    Component.Darkmode(),
+		    Component.DesktopOnly(Component.Explorer()),
+			],
+		  right: [
+		    Component.Graph(),
+		    Component.DesktopOnly(Component.TableOfContents()),
+		    Component.Backlinks(),
+			  ],
+		}),
       Plugin.FolderPage(), // 폴더 페이지 다시 활성화
       Plugin.TagPage(),
       Plugin.ContentIndex({
