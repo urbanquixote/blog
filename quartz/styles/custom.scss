@@ -78,7 +78,7 @@
 }
 
 // 사이드바 기본 숨김 상태
-.left.sidebar {
+.left {
   position: fixed;
   left: -300px; // 사이드바 너비만큼 왼쪽으로 숨김
   top: 0;
@@ -120,6 +120,7 @@
 .center {
   margin-left: 0 !important; // 기본적으로 사이드바 공간 제거
   transition: margin-left 0.3s ease;
+  width: 100% !important; // 전체 너비 사용
 }
 
 // 데스크톱에서 사이드바가 열렸을 때 콘텐츠 밀어내기 (선택사항)
@@ -135,7 +136,7 @@
 
 // 모바일 최적화
 @media (max-width: 768px) {
-  .left.sidebar {
+  .left {
     width: 280px;
     left: -280px;
   }
@@ -171,7 +172,7 @@
     }
   }
   
-  .left.sidebar {
+  .left {
     background: var(--dark);
     border-right-color: var(--gray);
   }

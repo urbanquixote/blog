@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(overlay);
   
   // 사이드바 요소 찾기
-  const sidebar = document.querySelector('.left.sidebar');
+  const sidebar = document.querySelector('.left');
   
   if (!sidebar) {
     console.warn('사이드바를 찾을 수 없습니다.');

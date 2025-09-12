@@ -44,7 +44,6 @@ export const defaultContentPageLayout: PageLayout = {
       folderClickBehavior: "link",
       useSavedState: false,
     }),
-    Component.DesktopOnly(Component.Graph()),
   ],
   right: [],
 }
@@ -70,7 +69,6 @@ export const defaultListPageLayout: PageLayout = {
       folderClickBehavior: "link",
       useSavedState: false,
     }),
-    Component.DesktopOnly(Component.Graph()),
   ],
   right: [],
 }
