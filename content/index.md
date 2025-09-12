@@ -257,7 +257,14 @@ body {
             <div class="subcategory-title">📰 뉴스 읽기</div>
             <div class="subcategory-description">경제와 비즈니스 트렌드 분석</div>
             <!-- NEWS_START -->
-            
+**최신 뉴스:**
+- [[250911 (Barron’s) Robinhood가 트레이더들을 위한 소셜미디어 앱이 되고자 한다]]
+- [[250910 (FT) 온라인 여행 플랫폼, 인공지능 ‘에이전트’ 부상에 대비​​​​​​​​​​​​​​​​]]
+- [[250909 (FT) 힐튼과 메리어트, 인도 소도시 진출 주도]]
+- [[250909 (FT) 피터 틸 지원 핀테크 Brex, IPO 추진 위한 유럽 확장 계획]]
+- [[250909 (FT) 미국인들 15년 만에 최대 건강보험료 인상에 직면]]
+
+→ [모든 뉴스 보기](./News/)
             <!-- NEWS_END -->
         </div>
         <div class="subcategory-box">
