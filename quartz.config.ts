@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import * as Component from "./quartz/components"
 
 /**
  * Quartz 4 Configuration
@@ -78,22 +79,22 @@ const config: QuartzConfig = {
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage({
-		  head: Component.Head(),
-		  header: [],
-		  beforeBody: [Component.Breadcrumbs()],
-		  left: [
-		    Component.PageTitle(),
-		    Component.MobileOnly(Component.Spacer()),
-		    Component.Search(),
-		    Component.Darkmode(),
-		    Component.DesktopOnly(Component.Explorer()),
-			],
-		  right: [
-		    Component.Graph(),
-		    Component.DesktopOnly(Component.TableOfContents()),
-		    Component.Backlinks(),
-			  ],
-		}),
+        head: Component.Head(),
+        header: [],
+        beforeBody: [Component.Breadcrumbs()],
+        left: [
+          Component.PageTitle(),
+          Component.MobileOnly(Component.Spacer()),
+          Component.Search(),
+          Component.Darkmode(),
+          Component.DesktopOnly(Component.Explorer()),
+        ],
+        right: [
+          Component.Graph(),
+          Component.DesktopOnly(Component.TableOfContents()),
+          Component.Backlinks(),
+        ],
+      }),
       Plugin.FolderPage(), // 폴더 페이지 다시 활성화
       Plugin.TagPage(),
       Plugin.ContentIndex({
