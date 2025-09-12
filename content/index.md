@@ -247,7 +247,6 @@ body {
         <p style="font-style: italic; color: var(--label-tertiary); margin-top: 8px;">생각의 씨앗이 자라나는 공간 🌿</p>
     </header>
 
-```
 <!-- 비즈니스 모델 탐색 대카테고리 -->
 <section class="category-container business-container">
     <header class="category-header">
@@ -325,6 +324,6 @@ body {
 <footer style="text-align: center; margin-top: 40px; padding: 20px; color: var(--label-tertiary); font-size: 15px; border-top: 0.5px solid var(--separator);">
     <p>이 사이트는 Obsidian과 Quartz v4로 구축된 디지털 가든입니다.</p>
 </footer>
-```
+
 
 </div>
