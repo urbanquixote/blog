@@ -90,9 +90,6 @@ const config: QuartzConfig = {
           Component.DesktopOnly(Component.Explorer()),
         ],
         right: [
-          Component.Graph(),
-          Component.DesktopOnly(Component.TableOfContents()),
-          Component.Backlinks(),
         ],
       }),
       Plugin.FolderPage(), // 폴더 페이지 다시 활성화
